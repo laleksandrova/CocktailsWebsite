@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,700,700i,800,800i|Playfair+Display:400,400i,700,700i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	color: inherit;
+	text-decoration: none;
+	box-sizing: border-box; /*width + height properties include content + padding + borders*/
+}
+*, *::before, *::after{
+	box-sizing: inherit; /*defines how the width and height are calculated*/
+}
+header{
+	background-image: url("https://s2.best-wallpaper.net/wallpaper/3840x2160/1711/Cherry-splash-water-black-background_3840x2160.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
+	width: calc(100% - 6em);
+	height: 90vh;
+	padding: 7vh 3em;
+	color: white;
+	text-align: left;	
+}
+nav{
+	display: inline-block;
+	color: white;
+	width: 45%;
+	text-align: center;
+	margin-left: 25%;
+	font-family: 'Montserrat', sans-serif;
+}
+nav ul{
+	display: flex;
+	justify-content: space-around;
+}
+nav a{
+	display: inline-block;
+	padding: 0.5em;
+}
+nav a:hover{
+	border-top: 1px solid white;
+	padding-bottom: 3%;	
+}
+nav i{
+	font-size: 2.5em;
+	margin-top: -2%;
+}
+header h2{
+	font-family: 'Homemade Apple', cursive;
+	margin-left: 4%;
+	margin-top: 11%;
+	font-size: 2.5em;
+}
+header h1{
+	font-family: 'Playfair Display', serif;
+	margin-left: 3%;
+	font-size: 3.625em;
+}
+.fac-tw-in ul li{
+	margin-top: 7%;
+	margin-right: 3%;
+	margin-left: 4%;
+	display: inline-block;
+}
+.fac-tw-in a{
+	font-size: 30px;
+}
+.facebook:hover{
+	color: rgb(66, 103, 178);
+}
+.twitter:hover{
+	color: rgb(40, 169, 224);
+}
+.insta:hover{
+	color: rgb(202, 59, 113);
+}
+/*header - search*/
+.container-search{
+	width: 300px;
+	height: 100px;
+	position: absolute;
+	margin: auto;	
+	top: 75%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.search-div-circle{
+	width: 70px;
+	height: 70px;
+	background: rgb(117, 21, 30);
+	border-radius: 50%;
+	transition: all 1s; /*when loading the page*/
+	z-index: 4;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	box-shadow: 0 0 45px 0 crimson;
+}
+.search-div-circle:hover{
+	cursor: pointer;
+}
+.search-div-circle::before{
+	content: "";
+	position: absolute;
+	margin: auto;
+	background: white;
+	transform: rotate(45deg);
+	transition: all .5s;
+	right: 0;
+	bottom: 0;
+	left: 22px;
+	top: 22px;
+	width: 12px;
+	height: 2px;
+}
+.search-div-circle::after{
+	content: "";
+	position: absolute;
+	margin: auto;
+	transition: all .5s;
+	right: 0;
+	bottom: 0;
+	top: -5px;
+	left: -5px;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: 2px solid white;
+}
+.container-search input{
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	outline: none;
+	border: none;
+	background: rgb(117, 21, 30);
+	color: white;
+	padding: 0 40px 0 20px;
+	border-radius: 30px;
+	transition: all 1s;
+	opacity: 0;
+	z-index: 5;
+	color: black;
+	box-shadow: 0 0 25px 0 rgb(117, 21, 30);
+}
+.container-search input:hover{
+	cursor: pointer;
+}
+.container-search input:focus{
+	width: 200px; /*kolko da se raztegli sled kato cukna krugcheto*/
+	opacity: 1;
+	cursor: text; /*indicates text that may be selected*/
+	color: white;
+}
+.container-search input:focus ~ .search-div-circle {
+	right: -250px;
+	background: #151515;
+	z-index: 6;
+}
+.container-search input:focus::before ~ .search-div-circle::before {
+	top: 0;
+	left: 0;
+	width: 25px;
+}
+.container-search input::placeholder{
+	color: white;
+}
+
+/*main section*/
+
+.index-links{
+	overflow: hidden;
+	padding: 25px 0px;
+}
+.index-links div{
+	float: left;
+	margin: 20px 10px 0;
+	height: 230px;		
+	color: white;
+	border-radius: 30px;
+}
+.index-links div h3{
+	font-family: "Montserrat", sans-serif;
+	font-size: 25px;
+	font-weight: bolder;
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 28%;
+}
+.index-boxlink-square{
+	width: calc(25% - 20px) !important;
+	background-color: rgb(117, 21, 30);
+}
+.index-boxlink-square:hover{
+	background-image: url("shaker.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	color: transparent;
+
+}
+
+.index-boxlink-rectangle{
+	width: calc(50% - 20px) !important;
+}
+.wrapper{
+	width: 80%;
+	margin: 0 auto;
+}
+.index-boxlink-rectangle{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 230px;
+}
+.principal{
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, 50%);
+	position: absolute;	
+	letter-spacing: 5px;
+	text-align: center;
+}
+.principal h1{
+	font-size: 70px;
+	margin-bottom: 20px;
+}
+
+.alchohol{
+	animation: slide 20s infinite;
+}
+
+@keyframes slide{
+	0%{
+		background-image: url('http://vintagekitty.com/wp-content/uploads/2016/08/Whiskey-Buck-Horizontal-Web.jpg');
+		
+	}
+	25%{
+background-image: url('http://vintagekitty.com/wp-content/uploads/2016/08/Whiskey-Buck-Horizontal-Web.jpg');
+	}
+	25.01%{
+		background-image: url("https://ak5.picdn.net/shutterstock/videos/1023124045/thumb/1.jpg");
+	}
+	50%{
+background-image: url('https://ak5.picdn.net/shutterstock/videos/1023124045/thumb/1.jpg');
+	}
+	50.01%{
+		background-image: url('https://media.concreteplayground.com/content/uploads/2017/12/talulah-e1513130545138.jpg');
+
+	}
+	75%{
+background-image: url('https://media.concreteplayground.com/content/uploads/2017/12/talulah-e1513130545138.jpg');
+	}
+	75.01%{
+		background-image: url('https://www.sheknows.com/wp-content/uploads/2018/08/vgvqggfwdgtyfrckiobx.jpeg');
+
+	}
+	100%{
+		background-image: url('https://www.sheknows.com/wp-content/uploads/2018/08/vgvqggfwdgtyfrckiobx.jpeg');
+
+	}
+}
+
+.non-alchohol {
+	animation: sliding 20s infinite;
+}
+
+@keyframes sliding{
+	0%{
+		background-image: url('https://wallpaperstream.com/wallpapers/full/cocktails-and-drinks/Melons-Cocktails-HD-Wallpaper.jpg');
+		
+	}
+	25%{
+background-image: url('https://wallpaperstream.com/wallpapers/full/cocktails-and-drinks/Melons-Cocktails-HD-Wallpaper.jpg');
+
+	}
+	25.01%{
+		background-image: url('https://cdn-image.myrecipes.com/sites/default/files/1556573812/Caipirinha.jpg');
+	}
+	50%{
+background-image: url('https://cdn-image.myrecipes.com/sites/default/files/1556573812/Caipirinha.jpg');
+	}
+	50.01%{
+		background-image: url('https://images7.alphacoders.com/398/398762.jpg');
+
+	}
+	75%{
+background-image: url('https://images7.alphacoders.com/398/398762.jpg');
+	}
+	75.01%{
+		background-image: url("http://parade.com/wp-content/uploads/2014/05/Classic-Frozen-Margarita-tsri.jpg");
+
+	}
+	100%{
+		background-image: url("http://parade.com/wp-content/uploads/2014/05/Classic-Frozen-Margarita-tsri.jpg");
+
+	}
+}
+
+.bio {
+	animation: bio 20s infinite;
+}
+
+@keyframes bio{
+	0%{
+		background-image: url('https://brif.rs/wp-content/uploads/2018/10/green-2607334_960_720.jpg');
+		
+	}
+	25%{
+background-image: url('https://brif.rs/wp-content/uploads/2018/10/green-2607334_960_720.jpg');
+
+	}
+	25.01%{
+		background-image: url('https://img4.goodfon.com/wallpaper/nbig/7/ba/eda-napitok-sok-fresh-pomidory-petrushka-fresh-tomato-drink.jpg');
+	}
+	50%{
+background-image: url('https://img4.goodfon.com/wallpaper/nbig/7/ba/eda-napitok-sok-fresh-pomidory-petrushka-fresh-tomato-drink.jpg');
+	}
+	50.01%{
+		background-image: url('https://img4.goodfon.com/wallpaper/nbig/1/d9/smuzi-napitok-vitaminy-laim-granat-kivi-frukty.jpg');
+
+	}
+	75%{
+background-image: url('https://img4.goodfon.com/wallpaper/nbig/1/d9/smuzi-napitok-vitaminy-laim-granat-kivi-frukty.jpg');
+	}
+	75.01%{
+		background-image: url("https://img1.goodfon.com/wallpaper/big/f/a1/smoothie-fruit-green-fresh.jpg");
+
+	}
+	100%{
+		background-image: url("https://img1.goodfon.com/wallpaper/big/f/a1/smoothie-fruit-green-fresh.jpg");
+
+	}
+}
+
+
+
+.footer-of-form{
+	background-image: url('crop.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: calc(35vh - 14vh);
+	width: calc(100% - 6em);
+	color: white;
+	padding: 7vh 3em;
+}
+.footer-of-form h2{
+	font-family: 'Homemade Apple', cursive;
+}
+.footer-of-form h1{
+	font-family: 'Playfair Display', serif;
+	margin-bottom: 4%;
+}
+.heading{
+	display: inline-block;
+	width: 30%;
+}
+.footer-nav{
+	display: inline-block;
+	width: 15%;
+	font-family: 'Montserrat', sans-serif;
+}
+.footer-nav ul li:hover{
+	font-size: 25px;
+	transition: all 0.5s;
+}
+.footer-nav ul li{
+	margin-bottom: 4%;
+	font-size: 18px;
+}
+.fac-tw-in-footer{
+	display: inline-block;
+	width: 30%;
+	vertical-align: top;
+}
+.fac-tw-in-footer ul li{
+	display: inline-block;
+	width: 20%;
+	margin-top: 8%;
+	font-size: 30px;
+}
+
+
+@media only screen and (max-width: 768px){
+	.index-links div h3{
+	font-size: 18px;
+	margin-top: 35%;
+}
+}
+@media only screen and (max-width: 576px){
+		.index-links div{
+	float: none;
+	}
+	.index-boxlink-square{
+	width: calc(100% - 20px) !important;
+}
+.index-boxlink-rectangle{
+	width: calc(100% - 20px) !important;
+}
+
+	header nav ul li{
+		font-size: 14px;
+		margin-left: 3%;
+	}
+	header h2{
+		font-size: 1.2em;
+		margin-top: 55%;
+	}
+	header h1{
+		font-size: 2.3em;
+		margin-bottom: 7%;
+	}
+.footer-of-form{
+	padding: 5vh 2em;
+	width: calc(100% - 4em);
+}
+.footer-of-form h1{
+	margin-bottom: 3%;
+	font-size: 16px;
+	
+}
+footer .heading{
+margin-right: 15%;
+}
+.footer-of-form h2{
+	font-size: 13px;
+}
+.footer-nav{
+	display: inline-block;
+	width: 18%;
+}
+.footer-nav ul li:hover{
+	font-size: 20px;
+}
+.footer-nav ul li{
+	font-size: 15px;
+}
+.fac-tw-in-footer{
+	display: block;
+}
+.fac-tw-in-footer ul li{
+	width: 20%;
+	margin-top: 15%;
+	margin-right: 9%;
+	font-size: 20px;
+}
+}
+
+
+
+
+
+

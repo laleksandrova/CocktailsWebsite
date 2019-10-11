@@ -1,0 +1,56 @@
+body{
+	font-family: "Arial";
+}
+.main-container{
+	position: absolute;
+	width: auto;
+	height: auto;
+	border-radius: 15px;
+	background-color: yellow;
+}
+.picture-container{
+	background-color: white;
+	box-shadow: 0 0 10px #151515;
+	border-radius: 15px;
+	width: 300px;
+	height: 500px;
+	display: inline-block;
+}
+.only-picture{
+	background-image: url("https://www.mordeo.org/files/uploads/2017/07/Fresh-Oranges-HD-Mobile-Wallpaper-950x1520.jpg");
+	background-size: 300px 400px;
+	background-repeat: no-repeat;
+	background-color: white;
+	width: 300px;
+	height: 400px;
+	display: inline-block;
+	position: absolute;
+	z-index: 4;
+	border-radius: 15px 15px 200px 200px;
+}
+#left-btn-in, #right-btn-up{
+	color: white;
+	display: inline-block;
+	width: 147px;
+	height: 500px;
+	background-color: white;
+	cursor: pointer;
+}
+#left-btn-in{
+	border-radius: 15px 0 0 15px;
+}
+#right-btn-up{
+	border-radius: 15px 15px 15px 0;
+}
+#left-btn-in:hover{
+   color: black;
+   box-shadow: 5px 0 18px -10px #333;
+   z-index: 1;
+   position: absolute;
+}
+#right-btn-up:hover{
+	color: black;
+   box-shadow: 5px 0 15px -10px #333;
+   z-index: 1;
+   position: absolute;
+}

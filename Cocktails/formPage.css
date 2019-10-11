@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,700,700i,800,800i|Playfair+Display:400,400i,700,700i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	color: inherit;
+	text-decoration: none;
+	box-sizing: border-box; /*width + height properties include content + padding + borders*/
+}
+*, *::before, *::after{
+	box-sizing: inherit; /*defines how the width and height are calculated*/
+}
+
+/*header*/
+
+header{
+	background-image: url("https://s2.best-wallpaper.net/wallpaper/3840x2160/1711/Cherry-splash-water-black-background_3840x2160.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
+	width: calc(100% - 6em);
+	height: 90vh;
+	padding: 7vh 3em;
+	color: white;
+	text-align: left;	
+}
+nav{
+	display: inline-block;
+	color: white;
+	width: 45%;
+	text-align: center;
+	margin-left: 25%;
+	font-family: 'Montserrat', sans-serif;
+}
+nav ul{
+	display: flex;
+	justify-content: space-around;
+}
+nav a{
+	display: inline-block;
+	padding: 0.5em;
+}
+nav a:hover{
+	border-top: 1px solid white;
+	padding-bottom: 3%;	
+}
+nav i{
+	font-size: 2.5em;
+	margin-top: -2%;
+}
+header h2{
+	font-family: 'Homemade Apple', cursive;
+	margin-left: 4%;
+	margin-top: 11%;
+	font-size: 2.5em;
+}
+header h1{
+	font-family: 'Playfair Display', serif;
+	margin-left: 3%;
+	font-size: 3.625em;
+}
+.fac-tw-in ul li{
+	margin-top: 7%;
+	margin-right: 3%;
+	margin-left: 4%;
+	display: inline-block;
+}
+.fac-tw-in a{
+	font-size: 30px;
+}
+.facebook:hover{
+	color: rgb(66, 103, 178);
+}
+.twitter:hover{
+	color: rgb(40, 169, 224);
+}
+.insta:hover{
+	color: rgb(202, 59, 113);
+}
+
+/*header - search*/
+
+.container-search{
+	width: 300px;
+	height: 100px;
+	position: absolute;
+	margin: auto;	
+	top: 75%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.search-div-circle{
+	width: 70px;
+	height: 70px;
+	background: rgb(117, 21, 30);
+	border-radius: 50%;
+	transition: all 1s; /*when loading the page*/
+	z-index: 4;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	box-shadow: 0 0 45px 0 crimson;
+}
+.search-div-circle:hover{
+	cursor: pointer;
+}
+.search-div-circle::before{
+	content: "";
+	position: absolute;
+	margin: auto;
+	background: white;
+	transform: rotate(45deg);
+	transition: all .5s;
+	right: 0;
+	bottom: 0;
+	left: 22px;
+	top: 22px;
+	width: 12px;
+	height: 2px;
+}
+.search-div-circle::after{
+	content: "";
+	position: absolute;
+	margin: auto;
+	transition: all .5s;
+	right: 0;
+	bottom: 0;
+	top: -5px;
+	left: -5px;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: 2px solid white;
+}
+.container-search input{
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	outline: none;
+	border: none;
+	background: rgb(117, 21, 30);
+	color: white;
+	padding: 0 40px 0 20px;
+	border-radius: 30px;
+	transition: all 1s;
+	opacity: 0;
+	z-index: 5;
+	color: black;
+	box-shadow: 0 0 25px 0 rgb(117, 21, 30);
+}
+.container-search input:hover{
+	cursor: pointer;
+}
+.container-search input:focus{
+	width: 200px; /*kolko da se raztegli sled kato cukna krugcheto*/
+	opacity: 1;
+	cursor: text; /*indicates text that may be selected*/
+	color: white;
+}
+.container-search input:focus ~ .search-div-circle {
+	right: -250px;
+	background: #151515;
+	z-index: 6;
+}
+.container-search input:focus::before ~ .search-div-circle::before {
+	top: 0;
+	left: 0;
+	width: 25px;
+}
+.container-search input::placeholder{
+	color: white;
+}
+
+/*form*/
+
+section {
+	background-image: url("http://s1.1zoom.me/b4839/861/Citrus_Lemons_Grapefruit_Chopsticks_Highball_glass_554367_2560x1440.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+}
+section h1 {
+	font-weight: bold;
+	margin: 0;
+	font-family: 'Playfair Display', serif;
+	margin-bottom: 2%;
+}
+section p {
+	font-size: 14px;
+	font-weight: lighter;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 3% 0 5% 0;
+}
+.forgot-pass{
+	font-size: 14px;
+	text-decoration: none;
+	margin: 8% 0;
+	font-style: italic;
+}
+section button{
+	border-radius: 20px;
+	border: 1px solid rgb(117, 21, 30);
+	background-color: rgb(117, 21, 30);
+	box-shadow: 0 0 25px 0 rgb(117, 21, 30);
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bolder;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 90ms ease-in;
+}
+.sign-up-btn{
+	border-radius: 20px;
+	border: 1px solid rgb(117, 21, 30);
+	background-color: rgb(117, 21, 30);
+	box-shadow: 0 0 25px 0 rgb(117, 21, 30);
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bolder;
+	padding: 12px 25px;
+	text-transform: uppercase;
+	transition: transform 90ms ease-in;
+	margin-left: -15%;
+}
+section button:active {
+	transform: scale(0.95);
+}
+section button:focus {
+	outline: none;
+}
+.btns-overlay {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+section form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+input{
+	background-color: rgb(248, 214, 217);
+	border: none;
+	padding: 10px 13px;
+	margin: 6px 0;
+	width: 100%;
+}
+.container {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 15px 25px #151515;
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+}
+.form-container {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+}
+.sign-in-container {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+.container.right-panel-active .sign-in-container {
+	transform: translateX(100%);
+}
+.sign-up-container {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+}
+.container.right-panel-active .sign-up-container {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+}
+@keyframes show {
+	0%, 49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+.overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+.container.right-panel-active .overlay-container{
+	transform: translateX(-100%);
+}
+.overlay {
+	background: rgb(117, 21, 30);
+	background: linear-gradient(to right, rgb(234, 137, 154), rgb(197, 29, 52), rgb(117, 21, 30));
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+.container.right-panel-active .overlay {
+	transform: translateX(50%);
+}
+.overlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 41%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+.overlay-left {
+	transform: translateX(-20%);
+}
+.container.right-panel-active .overlay-left {
+	transform: translateX(0);
+}
+.overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+.container.right-panel-active .overlay-right {
+	transform: translateX(20%);
+}
+.social-container {
+	margin: 20px 0;
+}
+.social-container ul li{
+	display: inline-block;
+}
+.social-container a {
+	font-size: 30px;
+	letter-spacing: 25px;
+}
+.genderType span{
+	display: inline-block;
+}
+.genderType span label, .country-birthdate span label{
+	font-family: 'Playfair Display', serif;
+	font-size: 14px;
+}
+.country-birthdate span{
+	display: inline-block;
+	width: 44%;
+}
+#bday{
+	margin-left: 2%;
+}
+#country{
+	background-color: rgb(248, 214, 217);
+	border: none;
+	padding: 11px 13px;
+}
+.span-left{
+	margin-right: 10%;
+}
+select, input
+{
+	font-family: 'Montserrat', sans-serif;
+}
+
+/*footer*/
+
+.footer-of-form{
+	background-image: url('crop.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: calc(35vh - 14vh);
+	width: calc(100% - 6em);
+	color: white;
+	padding: 7vh 3em;
+}
+.footer-of-form h2{
+	font-family: 'Homemade Apple', cursive;
+}
+.footer-of-form h1{
+	font-family: 'Playfair Display', serif;
+	margin-bottom: 4%;
+}
+.heading{
+	display: inline-block;
+	width: 30%;
+}
+.footer-nav{
+	display: inline-block;
+	width: 15%;
+	font-family: 'Montserrat', sans-serif;
+}
+.footer-nav ul li:hover{
+	font-size: 25px;
+	transition: all 0.5s;
+}
+.footer-nav ul li{
+	margin-bottom: 4%;
+	font-size: 18px;
+}
+.fac-tw-in-footer{
+	display: inline-block;
+	width: 30%;
+	vertical-align: top;
+}
+.fac-tw-in-footer ul li{
+	display: inline-block;
+	width: 20%;
+	margin-top: 8%;
+	font-size: 30px;
+}
+
+@media only screen and (max-width: 576px){
+	header nav ul li{
+		font-size: 14px;
+		margin-left: 3%;
+	}
+	header h2{
+		font-size: 1.2em;
+		margin-top: 55%;
+	}
+	header h1{
+		font-size: 2.3em;
+		margin-bottom: 7%;
+	}
+	section h1{
+		font-size: 14px;
+	}
+	section p{
+		font-size: 12px;
+		line-height: 16px;
+		margin: 2% 0 4% 0;
+	}
+	.forgot-pass{
+		font-size: 12px;
+		margin: 6% 0;
+	}
+	section button{
+		padding: 10px 35px;
+		font-size: 11px;
+	}
+	.sign-up-btn{
+		padding: 10px 35px;
+		font-size: 11px;
+	}
+	input{
+	padding: 5px 8px;
+}
+.genderType span label{
+	font-size: 10px;
+}
+.country-birthdate span label{
+	font-size: 10px;
+}
+.social-container {
+	margin: 10px 0;
+}
+.social-container a {
+	font-size: 15px;
+	letter-spacing: 17px;
+}
+#country{
+	padding: 5px 7px;
+}
+
+.footer-of-form{
+	padding: 5vh 2em;
+	width: calc(100% - 4em);
+}
+.footer-of-form h1{
+	margin-bottom: 3%;
+	font-size: 16px;
+	
+}
+footer .heading{
+margin-right: 15%;
+}
+.footer-of-form h2{
+	font-size: 13px;
+}
+.footer-nav{
+	display: inline-block;
+	width: 18%;
+}
+.footer-nav ul li:hover{
+	font-size: 20px;
+}
+.footer-nav ul li{
+	font-size: 15px;
+}
+.fac-tw-in-footer{
+	display: block;
+}
+.fac-tw-in-footer ul li{
+	width: 20%;
+	margin-top: 15%;
+	margin-right: 9%;
+	font-size: 20px;
+}
+}

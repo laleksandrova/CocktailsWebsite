@@ -1,0 +1,641 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,700,700i,800,800i|Playfair+Display:400,400i,700,700i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	color: inherit;
+	text-decoration: none;
+	box-sizing: border-box; /*width + height properties include content + padding + borders*/
+}
+*, *::before, *::after{
+	box-sizing: inherit; /*defines how the width and height are calculated*/
+}
+
+/*header*/
+header{
+	background-image: url("https://s2.best-wallpaper.net/wallpaper/3840x2160/1711/Cherry-splash-water-black-background_3840x2160.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
+	width: calc(100% - 6em);
+	height: 90vh;
+	padding: 7vh 3em;
+	color: white;
+	text-align: left;	
+}
+nav{
+	display: inline-block;
+	color: white;
+	width: 45%;
+	text-align: center;
+	margin-left: 25%;
+	font-family: 'Montserrat', sans-serif;
+}
+nav ul{
+	display: flex;
+	justify-content: space-around;
+}
+nav a{
+	display: inline-block;
+	padding: 0.5em;
+}
+nav a:hover{
+	border-top: 1px solid white;
+	padding-bottom: 3%;	
+}
+nav i{
+	font-size: 2.5em;
+	margin-top: -2%;
+}
+header h2{
+	font-family: 'Homemade Apple', cursive;
+	margin-left: 4%;
+	margin-top: 11%;
+	font-size: 2.5em;
+}
+header h1{
+	font-family: 'Playfair Display', serif;
+	margin-left: 3%;
+	font-size: 3.625em;
+}
+.fac-tw-in ul li{
+	margin-top: 7%;
+	margin-right: 3%;
+	margin-left: 4%;
+	display: inline-block;
+}
+.fac-tw-in a{
+	font-size: 30px;
+}
+.facebook:hover{
+	color: rgb(66, 103, 178);
+}
+.twitter:hover{
+	color: rgb(40, 169, 224);
+}
+.insta:hover{
+	color: rgb(202, 59, 113);
+}
+
+/*header - search*/
+.container-search{
+	width: 300px;
+	height: 100px;
+	position: absolute;
+	margin: auto;	
+	top: 75%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.search-div-circle{
+	width: 70px;
+	height: 70px;
+	background: rgb(117, 21, 30);
+	border-radius: 50%;
+	transition: all 1s; /*when loading the page*/
+	z-index: 4;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	box-shadow: 0 0 45px 0 crimson;
+}
+.search-div-circle:hover{
+	cursor: pointer;
+}
+.search-div-circle::before{
+	content: "";
+	position: absolute;
+	margin: auto;
+	background: white;
+	transform: rotate(45deg);
+	transition: all .5s;
+	right: 0;
+	bottom: 0;
+	left: 22px;
+	top: 22px;
+	width: 12px;
+	height: 2px;
+}
+.search-div-circle::after{
+	content: "";
+	position: absolute;
+	margin: auto;
+	transition: all .5s;
+	right: 0;
+	bottom: 0;
+	top: -5px;
+	left: -5px;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: 2px solid white;
+}
+.container-search input{
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	outline: none;
+	border: none;
+	background: rgb(117, 21, 30);
+	color: white;
+	padding: 0 40px 0 20px;
+	border-radius: 30px;
+	transition: all 1s;
+	opacity: 0;
+	z-index: 5;
+	color: black;
+	box-shadow: 0 0 25px 0 rgb(117, 21, 30);
+}
+.container-search input:hover{
+	cursor: pointer;
+}
+.container-search input:focus{
+	width: 200px; /*kolko da se raztegli sled kato cukna krugcheto*/
+	opacity: 1;
+	cursor: text; /*indicates text that may be selected*/
+	color: white;
+}
+.container-search input:focus ~ .search-div-circle {
+	right: -250px;
+	background: #151515;
+	z-index: 6;
+}
+.container-search input:focus::before ~ .search-div-circle::before {
+	top: 0;
+	left: 0;
+	width: 25px;
+}
+.container-search input::placeholder{
+	color: white;
+}
+
+
+
+/*main -> section intro*/
+.intro{
+	background-color: rgb(242, 246, 247);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	width: calc(100% - 6em);
+	height: 50vh;
+	padding: 7vh 3em;
+	color: black;	
+	text-align: center;
+}
+.intro h2{
+	font-family: 'Playfair Display', serif;
+	font-style: italic;
+	font-size: 30px;
+}
+.intro div{
+	display: inline-block;
+}
+.text-intro{
+	vertical-align: top;
+	width: 20%;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	margin-top: 4%;
+	line-height: 24px;
+}
+.text-intro::first-letter { 
+	font-size: 150%;
+	font-family: 'Homemade Apple', cursive;
+}
+.pics-intro{
+	vertical-align: top;
+	margin-top: 5%;
+	width: 45%;
+	margin-bottom: 15% !important;
+}
+.intro div img{	
+	border-radius: 50%;
+	border: 2px solid black;
+}
+.left-pic, .right-pic{
+	width: 10rem;
+	height: 10rem;
+	vertical-align: middle;
+	z-index: 2;
+	position: relative;
+}
+.left-pic img, .right-pic img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;	
+}
+.left-pic img{
+	margin-right: -45%;
+}
+.right-pic img{
+	margin-left: -45%;
+}
+.middle-pic{
+	width: 14rem;
+	height: 14rem;
+	vertical-align: middle;
+	z-index: 6;
+	position: relative;
+}
+.middle-pic img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;	
+}
+
+/*main -> section-sign-up*/
+.section-sign-up{
+	background-color: rgb(117, 21, 30);
+	height: 20vh;
+	width: calc(100% - 6em);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
+	padding: 7vh 3em;
+}
+.section-sign-up h2{
+	color: white;
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+	margin-bottom: 3%;
+	font-style: italic;
+	letter-spacing: 2px;
+	font-size: 27px;
+}
+.section-sign-up a{
+	border-radius: 30px;
+	color: white;
+	background-color: #151515;
+	padding: 10px 40px;
+	box-shadow: 0 0 25px 0 rgb(242, 246, 247);
+	margin-left: 43%;
+	font-size: 20px;
+	font-family: 'Homemade Apple', cursive;
+}
+.section-sign-up a:hover{
+	background-color: rgb(242, 246, 247);
+	box-shadow: 0 0 25px 0 #151515;
+	color: black;
+}
+
+/*main -> section menu*/
+.menu{
+	background-image: url("https://i.pinimg.com/originals/dd/9a/2e/dd9a2e1567e388c36c10682de9b60597.jpg");
+	width: calc(100% - 6em);
+	padding: 7vh 3em;
+	background-repeat: no-repeat;
+	height: 70vh;
+}
+.menu h1{
+	font-family: 'Homemade Apple', cursive;
+	font-size: 30px;
+	margin-bottom: 3%;
+	text-align: center;
+	color: white;
+	font-weight: bolder;
+	font-size: 40px;
+}
+.menu-div{
+	display: inline-block;
+	width: 350px;
+	height: 350px;
+	margin-left: 6%;
+	margin-bottom: 3%;
+	position: relative;
+}
+.menu-div-img-left, .menu-div-img-middle, .menu-div-img-right{
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 30px;
+}
+.btn{
+	position: absolute;
+	border-radius: 30px;
+	color: white;
+	background-color: rgb(117, 21, 30);
+	padding: 10px 40px;
+	box-shadow: 0 0 30px 0 rgb(117, 21, 30);
+	font-size: 15px;
+	font-family: 'Playfair Display', serif;
+	border: none;
+	cursor: pointer;
+	top: 81%;
+	left: 29%;
+
+}
+.menu-div:hover{
+	background-color: #151515;
+	color: white;
+	box-shadow: 0 0 30px 0  #151515;
+	cursor: pointer;
+}
+.mapouter{
+	height: 300px;
+	width: 500px;
+}
+
+
+/*main -> section reviews*/
+.user-reviews{
+	background-image: url("https://www.texasmonthly.com/wp-content/uploads/2019/04/Barfly-2000x0-c-default.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	padding: 7vh 3em;
+	width: calc(100% - 6em);
+	height: 90vh;
+	display: grid;
+	grid-template-columns: repeat(9, 1fr);
+	grid-template-rows: repeat(9, 1fr);
+	font-family: 'Montserrat', sans-serif;
+}
+.section-title{
+	grid-area: 2 / 6 / 4 / 9;
+	color: black;
+	font-size: 35px;
+	color: white;
+	font-style: italic;
+}
+.man-up-review{
+	grid-area: 1 / 2 / 5 / 5;
+	padding: 7vh 2em;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 30px;
+}
+.man-up-review div{
+	display: inline-block;
+	width: 45%;
+}
+.man-middle-review{
+	grid-area: 4 / 6 / 8 / 9;
+	padding: 7vh 2em;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 30px;
+}
+.man-middle-review div{
+	display: inline-block;
+	width: 45%;
+	margin-left: 4%;
+}
+.man-down-review{
+	grid-area: 6 / 2 / 11 / 5;
+	padding: 7vh 2em 9vh 2em;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 30px;
+}
+.man-down-review div{
+	display: inline-block;
+	width: 45%;
+	margin-left: 4%;
+}
+.user-reviews img{
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+}
+.user-reviews h3, .user-reviews h4{
+	margin-bottom: 5%;
+}
+.user-reviews p{
+	margin-bottom: 10%;
+}
+.checked{
+	color: gold;
+}
+.btn-reviews{
+	border-radius: 30px;
+	color: white;
+	background-color: #151515;
+	padding: 10px 40px;
+	box-shadow: 0 0 30px 0 #151515;
+	font-size: 15px;
+	font-family: 'Playfair Display', serif;
+	border: none;
+	cursor: pointer;
+	grid-area: 9 / 6 / 10 / 8;
+	font-family: 'Montserrat', sans-serif;
+}
+.btn-reviews:hover{
+	background-color: rgb(117, 21, 30);
+	color: white;
+	box-shadow: 0 0 30px 0  rgb(117, 21, 30);
+}
+
+
+/*footer*/
+footer{
+	background-image: url("https://s2.best-wallpaper.net/wallpaper/3840x2160/1805/Strawberry-cocktail-glass-cup_3840x2160.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
+	width: calc(100% - 8em);
+	height: 60vh;
+	padding: 7vh 4em;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+}
+.footer-map{
+	display: inline-block;
+	width: 43%;
+	vertical-align: top;
+}
+.footer-map h2{
+	font-family: 'Homemade Apple', cursive;
+}
+.footer-map h1{
+	font-family: 'Playfair Display', serif;
+	margin-bottom: 4%;
+}
+.footer-menu{
+	display: inline-block;
+	width: 40%;
+	vertical-align: top;
+}
+.footer-menu h2{
+	margin-bottom: 3%;
+	font-family: 'Playfair Display', serif;
+}
+.footer-menu ul li{
+	margin-bottom: 2%;
+}
+.footer-nav{
+	display: block;
+}
+.footer-contact-info{
+	margin-top: 15%;
+	display: inline-block;
+	width: 15%;
+	vertical-align: top;
+}
+.footer-contact-info h2{
+	margin-bottom: 8%;
+	font-family: 'Playfair Display', serif;
+}
+.footer-contact-info p{
+	margin-bottom: 4%;
+}
+.footer-contact-info h4{
+	margin-bottom: 5%;
+}
+
+@media only screen and (max-width: 576px){
+	.footer h2, h1{
+		text-align: center;
+	}
+	.footer-contact-info{
+		display: block;
+		width: 50%;
+		margin-left: 8%;
+	}
+	.fac-tw-in ul li{
+		margin-right: 10%;
+	}
+	.footer-contact-info p{
+		margin-bottom: 7%;
+	}
+	.footer-menu{
+		margin-left: 8%;
+	}
+	.mapouter{
+		margin-top: 30%;
+	}
+	.footer h1{
+		margin-bottom: 10%;
+		font-size: 11px;
+	}
+
+	footer{
+		height: 150vh;
+	}
+	.footer-map{
+		display: block;
+	}
+	.footer-menu{
+		display: block;
+	}
+	.footer-contact-info{
+		display: block;
+	}
+	.gmap_canvas {
+		width: 300px !important;
+		height: 200px !important;
+	}
+	header nav ul li{
+		display: block;
+
+	}
+	header h2{
+		font-size: 1.5em;
+		margin-top: 45%;
+	}
+	header h1{
+		font-size: 2.625em;
+	}
+	.fac-tw-in ul li{
+		margin-top: 10%;
+	}
+	.user-reviews{
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(1, 12fr);
+		padding: 7vh 3em;
+		width: calc(100% - 6em);
+		height: 150vh;
+	}
+	.section-title{
+		grid-area: 1 / 1 / 2 / 2;
+		font-size: 25px;
+		text-align: center;
+		margin-bottom: 4%;
+	}
+	.man-up-review{
+		grid-area: 3 / 1 / 5 / 2;
+		margin-bottom: 4%;
+	}
+	.man-middle-review{
+		grid-area: 6 / 1 / 8 / 2;
+		margin-bottom: 4%;
+	}
+	.man-down-review{
+		grid-area: 9 / 1 / 11 / 2;
+		margin-bottom: 4%;
+	}
+	.btn-reviews{
+		grid-area: 12 / 1 / 13 / 2;
+		margin-bottom: 4%;
+	}
+	.section-sign-up a{
+		padding: 5px 35px;
+		font-size: 15px;
+		margin-left: 35%;
+	}
+	.section-sign-up h2{
+		font-size: 22px;
+	}
+	.menu-div{
+		display: block;
+		margin-left: 24%;
+		margin-bottom: 0;
+	}
+	.btn{
+		top: 50%;
+		left: 15%;
+	}
+	.menu img{
+		width: 270px;
+		height: 255px;
+	}
+	.menu h1{
+		font-size: 28px;
+	}
+	.menu{
+		height: 155vh;
+		background-size: 100% 100%;
+	}
+	.intro h2{
+		font-size: 20px;
+	}
+	.text-intro{
+		font-size: 15px;
+	}
+	.intro{
+		height: 100vh;
+	}
+	.intro div{
+		display: block;
+		vertical-align: middle;
+	}
+	.text-intro{
+		width: 100%;
+	}
+	.pics-intro{
+		width: 30%;
+		display: inline-block;
+		margin-left: 26%;
+	}
+
+.left-pic, .right-pic{
+	width: 5rem;
+	height: 5rem;
+}
+
+.middle-pic{
+	width: 9rem;
+	height: 9rem;
+}
+
+
+}
+
